@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_application_1/homescreen.dart';
+import 'package:flutter_application_1/settings_screen.dart';
 import 'package:flutter_application_1/profile_screen.dart';
-import 'package:flutter_application_1/search_screen.dart';
+
+
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -23,7 +26,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     
     print("SelectedIndex value: $selectedIndex");
   }
-  List screen = [Homescreen(),SearchScreen(), ProfileScreen()];
+  List screen = [Homescreen(),SettingsScreen(), ProfileScreen()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +39,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         onTap: ((value) =>(selectedValue(value))),
         items:[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Setting"),
           BottomNavigationBarItem(icon: Icon(Icons.account_box), label: "Profile"),
         ]),
     );
